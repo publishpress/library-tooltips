@@ -1,5 +1,4 @@
-```markdown
-# Tooltip Library
+# library-tooltips
 
 PublishPress lightweight tooltip system that supports both hover and click triggers.
 
