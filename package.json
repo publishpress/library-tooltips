@@ -1,5 +1,5 @@
 {
-  "name": "tooltip-library",
+  "name": "library-tooltips",
   "version": "1.0.0",
   "description": "A simple tooltip library",
   "main": "dist/js/tooltip.min.js",
