@@ -83,6 +83,7 @@ in your code after adding the dynamic tooltips
 - Tooltip content must be placed inside a `.tooltip-text` element.
 - You can add any HTML inside `.tooltip-text`, including links, formatting, etc.
 - An `<i>` element (used as the tooltip arrow) will automatically be appended if not present.
+- Clicking inside the tooltip popup will close it by default, to make a link clickable inside the popup, add `.clickable` class to the link/element.
 
 ## Build
 

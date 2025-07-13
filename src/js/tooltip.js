@@ -37,9 +37,12 @@
 
                 // Handle click-triggered tooltips
                 if (tooltip.classList.contains('click')) {
-                    tooltip.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
+                    tooltip.addEventListener('click', (event) => {
+                        // Skip if clicking an element with 'clickable' class or its children
+                        if (!event.target.closest('.clickable')) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
                         tooltip.classList.toggle('is-active');
                     });
                 }
@@ -53,8 +56,11 @@
             document.addEventListener('click', function (event) {
                 const tooltip = event.target.closest('[data-toggle="tooltip"].pp-tooltips-library.click');
                 if (tooltip) {
-                    event.preventDefault();
-                    event.stopPropagation();
+                    // Skip if clicking an element with 'clickable' class or its children
+                    if (!event.target.closest('.clickable')) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
                     tooltip.classList.toggle('is-active');
                 }
             });
