@@ -1,0 +1,17 @@
+{
+  "name": "library-tooltips",
+  "version": "1.0.0",
+  "description": "A simple tooltip library",
+  "main": "dist/js/tooltip.min.js",
+  "scripts": {
+    "build:less": "lessc src/less/tooltip.less src/css/tooltip.css",
+    "build:css": "npm run build:less && cleancss -o dist/css/tooltip.min.css src/css/tooltip.css",
+    "build:js": "uglifyjs src/js/tooltip.js -o dist/js/tooltip.min.js",
+    "build": "npm run build:css && npm run build:js"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "less": "^4.1.3",
+    "uglify-js": "^3.17.4"
+  }
+}
